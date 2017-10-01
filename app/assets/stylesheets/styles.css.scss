@@ -16,9 +16,48 @@ h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
+#links a, #user-info a, .info a, .name a, .well .nav-pills.nav-stacked li a {
+  text-decoration: none;
+  color: #666;
+  font-weight: bold;
+}
+
+img.avatar {
+  border-radius: 50%;
+  border: 1px solid #999;
+}
+
+button.navbar-toggle {
+  background-color: #fff!important;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background-color: rgba(245, 245, 245, 0.2);
+}
+
+ul.dropdown-menu {
+  background: #a32929;
+}
+
 .navbar {
   border: none;
   background-color: $navbar-color;
+}
+
+.navbar-brand img {
+    height: 24px;
+}
+
+a.navbar-brand {
+    padding: 12px 15px;
 }
 
 .navbar-brand {
@@ -33,6 +72,10 @@ h6 {
   &:hover {
     color: $bg-color !important;
   };
+}
+
+.navbar-brand, .navbar-default .navbar-nav > li > a {
+  font-family: inherit;
 }
 
 .avatar {
@@ -81,6 +124,12 @@ h6 {
 
 .btn-primary {
   background-color: $navbar-color;
+  border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .btn-primary.dropdown-toggle {
+  background-color: #e73b3b;
+  border: none;
 }
 
 .btn-sm {
@@ -129,7 +178,7 @@ textarea {
 }
 
 .liked {
-  color: $liked-color !important;
+  color: #cc3333 !important;
 }
 
 .points span {
@@ -191,6 +240,15 @@ p {
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .open > a:hover {
   background: darken($navbar-color, 10%);
+}
+
+.navbar-default .navbar-toggle {
+  border: none;
+  background-color: #c33 !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
 }
 
 .dropdown-menu > li > a {
