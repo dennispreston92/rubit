@@ -1,7 +1,10 @@
 <div id="user-info" class="well">
   <div class="text-center">
     <%= render 'shared/avatar', user: @user %><br>
-    <h5><%= link_to @user.name, @user %></h5>
+    <h5>
+      <%= link_to @user.name, @user %>
+      <%= render 'shared/verified', user: @user %>
+    </h5>
   </div>
   <h5>
     <%= fa_icon 'shield' %>
