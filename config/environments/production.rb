@@ -82,7 +82,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'https://rubit.herokuapp.com/' }
+  config.action_mailer.default_url_options = { host: 'https://rubit.org.uk/' }
 
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.perform_deliveries = true
@@ -90,9 +90,9 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
     :address              => 'smtp.sendgrid.net',
     :port                 => '587',
-    :domain               => 'heroku.com',
-    :user_name            => ENV['USERNAME'],
-    :password             => ENV['PASSWORD'],
+    :domain               => 'rubit.org.uk',
+    :user_name            => ENV['SENDGRID_USERNAME'],
+    :password             => ENV['SENDGRID_PASSWORD'],
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
