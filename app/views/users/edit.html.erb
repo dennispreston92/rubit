@@ -2,7 +2,7 @@
   <div class="col-lg-6 col-lg-offset-3">
     <div class="well">
       <h3>Edit Profile</h3>
-      <%= form_for(@user, multipart: true) do |f| %>
+      <%= form_for(@user, html: { class: 'directUpload', data: { 'form-data' => (@s3_direct_post.fields), 'url' => @s3_direct_post.url, 'host' => URI.parse(@s3_direct_post.url).host } }) do |f| %>
         <div class="form-group">
           <%= f.label :avatar %>
           <br>
