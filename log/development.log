@@ -19186,3 +19186,570 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 958ms (Views: 939.5ms | ActiveRecord: 7.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-02 18:18:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (10.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /mnt/c/Users/denni/rubit/app/controllers/application_controller.rb:10)
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Post> at /mnt/c/Users/denni/rubit/app/models/post.rb:23)
+  [1m[36mFollow Load (18.7ms)[0m  [1m[34mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = $1 AND "follows"."follower_type" = $2 AND "follows"."blocked" = $3[0m  [["follower_id", 24], ["follower_type", "User"], ["blocked", false]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 23[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/_avatar.html.erb (18.9ms)
+Started GET "/" for 127.0.0.1 at 2017-10-02 18:18:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /mnt/c/Users/denni/rubit/app/controllers/application_controller.rb:10)
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Post> at /mnt/c/Users/denni/rubit/app/models/post.rb:23)
+  [1m[36mFollow Load (4.0ms)[0m  [1m[34mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = $1 AND "follows"."follower_type" = $2 AND "follows"."blocked" = $3[0m  [["follower_id", 24], ["follower_type", "User"], ["blocked", false]]
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 23[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/_avatar.html.erb (33.7ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33520940 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb__890390589960551549_33536560 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+  Rendered shared/_verified.html.erb (15474.8ms)
+  Rendered shared/_user_info.html.erb (15522.1ms)
+  Rendered posts/_form.html.erb (159.8ms)
+  [1m[35m (37.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_id" IN (24, 23)[0m
+  [1m[36mPublicActivity::Activity Load (4.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_id" IN (24, 23) ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered shared/_verified.html.erb (13535.2ms)
+  Rendered shared/_user_info.html.erb (13701.9ms)
+  [1m[36mFollow Load (4.0ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.8ms)
+  Rendered posts/_form.html.erb (130.3ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_id" IN (24, 23)[0m
+  [1m[36mPublicActivity::Activity Load (1.5ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_id" IN (24, 23) ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  Rendered shared/_avatar.html.erb (1.3ms)
+  [1m[36mFollow Load (0.8ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.0ms)
+  Rendered shared/_verified.html.erb (0.7ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (836.6ms)
+  Rendered shared/_created_at.html.erb (732.7ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.3ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/follow/_create.html.erb (25.4ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/follow/_create.html.erb (1010.1ms)
+  Rendered public_activity/follow/_create.html.erb (27.0ms)
+  Rendered public_activity/follow/_create.html.erb (854.3ms)
+  [1m[36mEvent Load (24.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mEvent Load (23.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (1.0ms)
+  Rendered shared/_created_at.html.erb (0.8ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_avatar.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/event/_like.html.erb (22.2ms)
+  Rendered public_activity/event/_like.html.erb (22.5ms)
+  Rendered public_activity/event/_like.html.erb (118.1ms)
+  Rendered public_activity/event/_like.html.erb (118.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (23.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  [1m[35m (22.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (37.7ms)
+  Rendered shared/_actions.html.erb (60.2ms)
+  Rendered likes/_form.html.erb (39.8ms)
+  Rendered events/_event.html.erb (109.6ms)
+  Rendered shared/_actions.html.erb (62.5ms)
+  Rendered events/_event.html.erb (111.8ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (5.2ms)
+  Rendered likes/_form.html.erb (5.3ms)
+  Rendered shared/_actions.html.erb (13.5ms)
+  Rendered shared/_actions.html.erb (12.4ms)
+  Rendered events/_event.html.erb (45.2ms)
+  Rendered events/_event.html.erb (46.0ms)
+  Rendered public_activity/event/_create.html.erb (52.4ms)
+  Rendered public_activity/event/_create.html.erb (227.7ms)
+  Rendered public_activity/event/_create.html.erb (51.6ms)
+  Rendered public_activity/event/_create.html.erb (229.5ms)
+  [1m[36mPost Load (28.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mPost Load (28.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (1.4ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (4.4ms)
+  Rendered likes/_form.html.erb (3.4ms)
+  Rendered shared/_actions.html.erb (10.1ms)
+  Rendered shared/_actions.html.erb (8.9ms)
+  Rendered posts/_post.html.erb (40.6ms)
+  Rendered posts/_post.html.erb (41.1ms)
+  Rendered shared/_avatar.html.erb (0.3ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (4.2ms)
+  Rendered likes/_form.html.erb (4.5ms)
+  Rendered shared/_actions.html.erb (8.5ms)
+  Rendered shared/_actions.html.erb (8.5ms)
+  Rendered posts/_post.html.erb (30.2ms)
+  Rendered posts/_post.html.erb (30.5ms)
+  Rendered public_activity/post/_create.html.erb (38.9ms)
+  Rendered public_activity/post/_create.html.erb (39.8ms)
+  Rendered public_activity/post/_create.html.erb (157.1ms)
+  Rendered public_activity/post/_create.html.erb (157.3ms)
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Comment> at /mnt/c/Users/denni/rubit/app/models/comment.rb:27)
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Comment> at /mnt/c/Users/denni/rubit/app/models/comment.rb:27)
+  [1m[36mComment Load (8.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mComment Load (29.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered shared/_created_at.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/comment/_create.html.erb (20.8ms)
+  Rendered public_activity/comment/_create.html.erb (152.5ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/comment/_create.html.erb (22.0ms)
+  Rendered public_activity/comment/_create.html.erb (153.7ms)
+  Rendered shared/_paginate.html.erb (4.5ms)
+  Rendered shared/_paginate.html.erb (5.0ms)
+  Rendered shared/_links.html.erb (1.8ms)
+  Rendered shared/_links.html.erb (1.9ms)
+  Rendered home/index.html.erb within layouts/application (17789.3ms)
+  Rendered home/index.html.erb within layouts/application (15585.5ms)
+  Rendered shared/_navbar.html.erb (6.8ms)
+Completed 200 OK in 18940ms (Views: 18275.6ms | ActiveRecord: 194.4ms)
+
+
+  Rendered shared/_navbar.html.erb (5.0ms)
+Completed 200 OK in 16788ms (Views: 16162.6ms | ActiveRecord: 131.0ms)
+
+
+Started GET "/assets/jquery.ui.widget.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2017-10-02 18:18:22 +0100
+Started GET "/assets/z.jquery.fileupload.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2017-10-02 18:18:22 +0100
+Started GET "/assets/application.self-bbe5c9c287432a84da3d9f97fd432c5d6bb7301c1231d06e6365b6d41bba47fc.js?body=1" for 127.0.0.1 at 2017-10-02 18:18:22 +0100
+Started GET "/avatars/original/missing.png" for 127.0.0.1 at 2017-10-02 18:18:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/avatars/original/missing.png"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/dennispreston92/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dennispreston92/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dennispreston92/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /home/dennispreston92/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [57 times] (39.5ms)
+  Rendered /home/dennispreston92/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (41.4ms)
+  Rendering /home/dennispreston92/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dennispreston92/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.3ms)
+  Rendered /home/dennispreston92/.rvm/gems/ruby-2.4.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (433.0ms)
+Started GET "/users/dennis-preston/mentionable" for 127.0.0.1 at 2017-10-02 18:18:23 +0100
+Processing by UsersController#mentionable as JSON
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follows" ON "follows"."followable_id" = "users"."id" AND "follows"."followable_type" = $1 WHERE "follows"."blocked" = $2 AND "follows"."follower_id" = $3 AND "follows"."follower_type" = $4 AND "follows"."followable_type" = $5[0m  [["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["followable_type", "User"]]
+No serializer found for resource: {"id"=>23, "name"=>"Rails"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.16ms)
+Completed 200 OK in 141ms (Views: 42.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/dennis-preston/mentionable" for 127.0.0.1 at 2017-10-02 18:18:23 +0100
+Processing by UsersController#mentionable as JSON
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follows" ON "follows"."followable_id" = "users"."id" AND "follows"."followable_type" = $1 WHERE "follows"."blocked" = $2 AND "follows"."follower_id" = $3 AND "follows"."follower_type" = $4 AND "follows"."followable_type" = $5[0m  [["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["followable_type", "User"]]
+No serializer found for resource: {"id"=>23, "name"=>"Rails"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.19ms)
+Completed 200 OK in 14ms (Views: 2.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/dennis-preston/edit" for 127.0.0.1 at 2017-10-02 18:18:45 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 1.3ms)
+
+
+
+NoMethodError - undefined method `set_s3_direct_post' for #<UsersController:0x007f9f1889f468>
+Did you mean?  set_response!:
+  activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+  public_activity (1.5.0) lib/public_activity/utility/store_controller.rb:25:in `store_controller_for_public_activity'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:285:in `block in halting'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:447:in `block in around'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.2) lib/rails/engine.rb:522:in `call'
+  puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+  puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+  puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+  puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+  puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/1a0137db8c5acac7/variables" for 127.0.0.1 at 2017-10-02 18:18:46 +0100
+Started GET "/users/dennis-preston/edit" for 127.0.0.1 at 2017-10-02 18:21:31 +0100
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /mnt/c/Users/denni/rubit/app/controllers/application_controller.rb:10)
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 4.4ms)
+
+
+
+NoMethodError - undefined method `presigned_post' for nil:NilClass
+Did you mean?  presence_in:
+  app/controllers/users_controller.rb:59:in `set_s3_direct_post'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+  public_activity (1.5.0) lib/public_activity/utility/store_controller.rb:25:in `store_controller_for_public_activity'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:285:in `block in halting'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:447:in `block in around'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.2) lib/rails/engine.rb:522:in `call'
+  puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+  puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+  puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+  puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+  puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/00937fd7f6d6173e/variables" for 127.0.0.1 at 2017-10-02 18:21:32 +0100
+Started GET "/users/dennis-preston/edit" for 127.0.0.1 at 2017-10-02 18:30:07 +0100
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /mnt/c/Users/denni/rubit/app/controllers/application_controller.rb:10)
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 8.9ms)
+
+
+
+NoMethodError - undefined method `presigned_post' for nil:NilClass
+Did you mean?  presence_in:
+  app/controllers/users_controller.rb:59:in `set_s3_direct_post'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:454:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:448:in `block (2 levels) in around'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:286:in `block (2 levels) in halting'
+  public_activity (1.5.0) lib/public_activity/utility/store_controller.rb:25:in `store_controller_for_public_activity'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:285:in `block in halting'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:447:in `block in around'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.2) lib/rails/engine.rb:522:in `call'
+  puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+  puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+  puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+  puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+  puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/a6937380626e0bbc/variables" for 127.0.0.1 at 2017-10-02 18:30:07 +0100
+Started GET "/users/dennis-preston/edit" for 127.0.0.1 at 2017-10-02 18:31:11 +0100
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /mnt/c/Users/denni/rubit/app/controllers/application_controller.rb:10)
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_avatar.html.erb (1.2ms)
+  Rendered shared/_cover.html.erb (0.6ms)
+  Rendered users/edit.html.erb within layouts/application (102.6ms)
+  Rendered shared/_navbar.html.erb (8.0ms)
+Completed 200 OK in 734ms (Views: 682.8ms | ActiveRecord: 7.9ms)
+
+

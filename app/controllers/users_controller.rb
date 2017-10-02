@@ -6,7 +6,6 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user
   before_action :check_ownership, only: [:edit, :update]
-  before_action :set_s3_direct_post, only: [:new, :edit, :create, :update]
   respond_to :html, :js
 
   def show
