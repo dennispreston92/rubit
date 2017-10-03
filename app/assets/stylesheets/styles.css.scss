@@ -16,6 +16,10 @@ h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 #links a, #user-info a, .info a, .name a, .well .nav-pills.nav-stacked li a {
   text-decoration: none;
   color: #666;
