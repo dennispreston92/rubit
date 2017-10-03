@@ -21113,3 +21113,1465 @@ No serializer found for resource: {"id"=>23, "name"=>"Rails"}
 Completed 200 OK in 17ms (Views: 2.0ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-03 09:57:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (19.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (21.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /mnt/c/Users/denni/rubit/app/controllers/application_controller.rb:10)
+Processing by HomeController#index as HTML
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Post> at /mnt/c/Users/denni/rubit/app/models/post.rb:23)
+  [1m[36mFollow Load (51.9ms)[0m  [1m[34mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = $1 AND "follows"."follower_type" = $2 AND "follows"."blocked" = $3[0m  [["follower_id", 24], ["follower_type", "User"], ["blocked", false]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 23[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/_avatar.html.erb (22.7ms)
+  Rendered shared/_verified.html.erb (2730.3ms)
+  Rendered shared/_user_info.html.erb (2829.2ms)
+  Rendered posts/_form.html.erb (112.0ms)
+  [1m[35m (43.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_id" IN (24, 23)[0m
+  [1m[36mPublicActivity::Activity Load (3.3ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_id" IN (24, 23) ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (0.5ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.8ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_avatar.html.erb (5.3ms)
+  Rendered shared/_created_at.html.erb (945.2ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  Rendered public_activity/follow/_create.html.erb (72.2ms)
+  Rendered public_activity/follow/_create.html.erb (1161.3ms)
+  [1m[36mEvent Load (29.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.7ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/event/_like.html.erb (49.2ms)
+  Rendered public_activity/event/_like.html.erb (202.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (30.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (53.1ms)
+  Rendered shared/_actions.html.erb (98.5ms)
+  Rendered events/_event.html.erb (342.5ms)
+  Rendered shared/_avatar.html.erb (1.1ms)
+  Rendered shared/_verified.html.erb (0.8ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (89.9ms)
+  Rendered shared/_actions.html.erb (164.1ms)
+  Rendered events/_event.html.erb (449.4ms)
+  Rendered public_activity/event/_create.html.erb (478.6ms)
+  Rendered public_activity/event/_create.html.erb (953.1ms)
+  [1m[36mPost Load (36.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.7ms)
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (12.1ms)
+  Rendered shared/_actions.html.erb (34.3ms)
+  Rendered posts/_post.html.erb (145.4ms)
+  Rendered shared/_avatar.html.erb (0.9ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (11.9ms)
+  Rendered shared/_actions.html.erb (22.5ms)
+  Rendered posts/_post.html.erb (79.7ms)
+  Rendered public_activity/post/_create.html.erb (88.2ms)
+  Rendered public_activity/post/_create.html.erb (363.5ms)
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Comment> at /mnt/c/Users/denni/rubit/app/models/comment.rb:27)
+  [1m[36mComment Load (31.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.8ms)
+  Rendered shared/_verified.html.erb (0.2ms)
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered shared/_created_at.html.erb (1.4ms)
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  Rendered shared/_created_at.html.erb (1.8ms)
+  Rendered public_activity/comment/_create.html.erb (50.5ms)
+  Rendered public_activity/comment/_create.html.erb (268.2ms)
+  Rendered shared/_paginate.html.erb (5.3ms)
+  Rendered shared/_links.html.erb (3.7ms)
+  Rendered home/index.html.erb within layouts/application (6403.5ms)
+  Rendered shared/_navbar.html.erb (6.0ms)
+Completed 200 OK in 8517ms (Views: 7643.0ms | ActiveRecord: 264.8ms)
+
+
+Started GET "/users/dennis-preston/mentionable" for 127.0.0.1 at 2017-10-03 09:57:37 +0100
+Processing by UsersController#mentionable as JSON
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follows" ON "follows"."followable_id" = "users"."id" AND "follows"."followable_type" = $1 WHERE "follows"."blocked" = $2 AND "follows"."follower_id" = $3 AND "follows"."follower_type" = $4 AND "follows"."followable_type" = $5[0m  [["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["followable_type", "User"]]
+No serializer found for resource: {"id"=>23, "name"=>"Rails"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.16ms)
+Completed 200 OK in 153ms (Views: 61.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/dennis-preston/mentionable" for 127.0.0.1 at 2017-10-03 09:57:37 +0100
+Processing by UsersController#mentionable as JSON
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follows" ON "follows"."followable_id" = "users"."id" AND "follows"."followable_type" = $1 WHERE "follows"."blocked" = $2 AND "follows"."follower_id" = $3 AND "follows"."follower_type" = $4 AND "follows"."followable_type" = $5[0m  [["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["followable_type", "User"]]
+No serializer found for resource: {"id"=>23, "name"=>"Rails"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.2ms)
+Completed 200 OK in 55ms (Views: 15.4ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/users/dennis-preston" for 127.0.0.1 at 2017-10-03 09:59:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (24.9ms)
+  Rendered shared/_avatar.html.erb (27.3ms)
+  Rendered shared/_verified.html.erb (266.2ms)
+  Rendered shared/_user_info.html.erb (553.3ms)
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24[0m
+  [1m[36mPublicActivity::Activity Load (2.4ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (0.9ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (24.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.1ms)
+  Rendered shared/_verified.html.erb (1.0ms)
+  Rendered shared/_avatar.html.erb (21.3ms)
+  Rendered shared/_created_at.html.erb (50.2ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/follow/_create.html.erb (139.3ms)
+  Rendered public_activity/follow/_create.html.erb (706.6ms)
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/event/_like.html.erb (33.7ms)
+  Rendered public_activity/event/_like.html.erb (105.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.8ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (71.0ms)
+  Rendered shared/_actions.html.erb (144.6ms)
+  Rendered events/_event.html.erb (214.0ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (16.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (23.4ms)
+  Rendered shared/_actions.html.erb (32.7ms)
+  Rendered events/_event.html.erb (75.5ms)
+  Rendered public_activity/event/_create.html.erb (81.9ms)
+  Rendered public_activity/event/_create.html.erb (328.8ms)
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.0ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.7ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (6.3ms)
+  Rendered shared/_actions.html.erb (14.5ms)
+  Rendered posts/_post.html.erb (62.4ms)
+  Rendered shared/_avatar.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (0.9ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (7.6ms)
+  Rendered shared/_actions.html.erb (17.9ms)
+  Rendered posts/_post.html.erb (90.8ms)
+  Rendered public_activity/post/_create.html.erb (103.8ms)
+  Rendered public_activity/post/_create.html.erb (206.7ms)
+  Rendered shared/_paginate.html.erb (49.9ms)
+  Rendered users/show.html.erb within layouts/application (2350.2ms)
+  Rendered shared/_navbar.html.erb (16.1ms)
+Completed 200 OK in 4210ms (Views: 3416.4ms | ActiveRecord: 71.4ms)
+
+
+Started GET "/users/dennis-preston" for 127.0.0.1 at 2017-10-03 10:00:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /mnt/c/Users/denni/rubit/app/controllers/application_controller.rb:10)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (43.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (21.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (2.2ms)
+  Rendered shared/_avatar.html.erb (25.3ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_shared__verified_html_erb___437767865972848031_70045987966740 at /mnt/c/Users/denni/rubit/app/views/shared/_verified.html.erb:2)
+  Rendered shared/_verified.html.erb (26280.9ms)
+  Rendered shared/_user_info.html.erb (26388.4ms)
+  [1m[35m (26.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24[0m
+  [1m[36mPublicActivity::Activity Load (20.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (2.9ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (16.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (20.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.1ms)
+  Rendered shared/_verified.html.erb (0.8ms)
+  Rendered shared/_avatar.html.erb (10.1ms)
+  Rendered shared/_created_at.html.erb (975.4ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (1.9ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/follow/_create.html.erb (264.8ms)
+  Rendered public_activity/follow/_create.html.erb (2431.8ms)
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (10.4ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.9ms)
+  Rendered shared/_avatar.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.2ms)
+  Rendered public_activity/event/_like.html.erb (75.8ms)
+  Rendered public_activity/event/_like.html.erb (560.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.9ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (82.0ms)
+  Rendered shared/_actions.html.erb (129.9ms)
+  Rendered events/_event.html.erb (248.7ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (1.3ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (109.8ms)
+  Rendered shared/_actions.html.erb (162.0ms)
+  Rendered events/_event.html.erb (530.3ms)
+  Rendered public_activity/event/_create.html.erb (539.6ms)
+  Rendered public_activity/event/_create.html.erb (839.5ms)
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Post> at /mnt/c/Users/denni/rubit/app/models/post.rb:23)
+  [1m[36mPost Load (14.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.0ms)
+  Rendered shared/_verified.html.erb (1.5ms)
+  Rendered shared/_created_at.html.erb (1.4ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (10.5ms)
+  Rendered shared/_actions.html.erb (18.6ms)
+  Rendered posts/_post.html.erb (156.7ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (37.7ms)
+  Rendered shared/_actions.html.erb (62.8ms)
+  Rendered posts/_post.html.erb (172.6ms)
+  Rendered public_activity/post/_create.html.erb (187.2ms)
+  Rendered public_activity/post/_create.html.erb (547.5ms)
+  Rendered shared/_paginate.html.erb (13.0ms)
+  Rendered users/show.html.erb within layouts/application (31248.0ms)
+  Rendered shared/_navbar.html.erb (7.6ms)
+Completed 200 OK in 33704ms (Views: 32925.0ms | ActiveRecord: 299.2ms)
+
+
+Started GET "/assets/application.self-4e1aecc6a5c3ea0ffa2629d6e58bd49ef541eeb9f16514f2b97ee4a1229d7113.css?body=1" for 127.0.0.1 at 2017-10-03 10:01:08 +0100
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:01:16 +0100
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  [1m[36mFollow Load (2.8ms)[0m  [1m[34mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = $1 AND "follows"."follower_type" = $2 AND "follows"."blocked" = $3[0m  [["follower_id", 24], ["follower_type", "User"], ["blocked", false]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 23[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/_avatar.html.erb (1.6ms)
+  Rendered shared/_verified.html.erb (29.0ms)
+  Rendered shared/_user_info.html.erb (215.6ms)
+  Rendered posts/_form.html.erb (178.3ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_id" IN (24, 23)[0m
+  [1m[36mPublicActivity::Activity Load (0.7ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_id" IN (24, 23) ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (7.9ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (5.9ms)
+  Rendered shared/_created_at.html.erb (1.6ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (1.2ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/follow/_create.html.erb (299.5ms)
+  Rendered public_activity/follow/_create.html.erb (1159.0ms)
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/event/_like.html.erb (215.3ms)
+  Rendered public_activity/event/_like.html.erb (885.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (17.3ms)
+  Rendered shared/_actions.html.erb (53.8ms)
+  Rendered events/_event.html.erb (158.0ms)
+  Rendered shared/_avatar.html.erb (5.2ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (11.4ms)
+  Rendered shared/_actions.html.erb (19.4ms)
+  Rendered events/_event.html.erb (83.9ms)
+  Rendered public_activity/event/_create.html.erb (95.2ms)
+  Rendered public_activity/event/_create.html.erb (497.6ms)
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (8.9ms)
+  Rendered shared/_actions.html.erb (122.1ms)
+  Rendered posts/_post.html.erb (320.7ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (11.5ms)
+  Rendered shared/_actions.html.erb (57.1ms)
+  Rendered posts/_post.html.erb (266.1ms)
+  Rendered public_activity/post/_create.html.erb (316.3ms)
+  Rendered public_activity/post/_create.html.erb (865.7ms)
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Comment> at /mnt/c/Users/denni/rubit/app/models/comment.rb:27)
+  [1m[36mComment Load (18.8ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.9ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  [1m[36mEvent Load (29.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered shared/_created_at.html.erb (0.9ms)
+  Rendered shared/_avatar.html.erb (0.8ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/comment/_create.html.erb (122.9ms)
+  Rendered public_activity/comment/_create.html.erb (1389.0ms)
+  Rendered shared/_paginate.html.erb (5.4ms)
+  Rendered shared/_links.html.erb (2.3ms)
+  Rendered home/index.html.erb within layouts/application (5828.7ms)
+  Rendered shared/_navbar.html.erb (8.5ms)
+Completed 200 OK in 6609ms (Views: 6272.7ms | ActiveRecord: 114.9ms)
+
+
+Started GET "/users/dennis-preston/mentionable" for 127.0.0.1 at 2017-10-03 10:01:28 +0100
+Processing by UsersController#mentionable as JSON
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follows" ON "follows"."followable_id" = "users"."id" AND "follows"."followable_type" = $1 WHERE "follows"."blocked" = $2 AND "follows"."follower_id" = $3 AND "follows"."follower_type" = $4 AND "follows"."followable_type" = $5[0m  [["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["followable_type", "User"]]
+No serializer found for resource: {"id"=>23, "name"=>"Rails"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.16ms)
+Completed 200 OK in 156ms (Views: 70.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users/dennis-preston/mentionable" for 127.0.0.1 at 2017-10-03 10:01:28 +0100
+Processing by UsersController#mentionable as JSON
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follows" ON "follows"."followable_id" = "users"."id" AND "follows"."followable_type" = $1 WHERE "follows"."blocked" = $2 AND "follows"."follower_id" = $3 AND "follows"."follower_type" = $4 AND "follows"."followable_type" = $5[0m  [["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["followable_type", "User"]]
+No serializer found for resource: {"id"=>23, "name"=>"Rails"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.11ms)
+Completed 200 OK in 32ms (Views: 12.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users/dennis-preston" for 127.0.0.1 at 2017-10-03 10:07:49 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (14.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /mnt/c/Users/denni/rubit/app/controllers/application_controller.rb:10)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (1.3ms)
+  Rendered shared/_avatar.html.erb (32.4ms)
+Started GET "/users/dennis-preston" for 127.0.0.1 at 2017-10-03 10:07:50 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (6.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /mnt/c/Users/denni/rubit/app/controllers/application_controller.rb:10)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (2.3ms)
+  Rendered shared/_avatar.html.erb (19.6ms)
+  Rendered shared/_verified.html.erb (1984.8ms)
+  Rendered shared/_verified.html.erb (3789.3ms)
+  Rendered shared/_user_info.html.erb (2094.8ms)
+  Rendered shared/_user_info.html.erb (3886.8ms)
+  [1m[35m (36.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24[0m
+  [1m[35m (28.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24[0m
+  [1m[36mPublicActivity::Activity Load (3.9ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mPublicActivity::Activity Load (3.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (38.5ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFollow Load (1.3ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (4.8ms)
+  Rendered shared/_avatar.html.erb (5.0ms)
+  Rendered shared/_created_at.html.erb (872.9ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/follow/_create.html.erb (46.2ms)
+  Rendered public_activity/follow/_create.html.erb (1489.4ms)
+  Rendered shared/_created_at.html.erb (939.0ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_avatar.html.erb (0.8ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/follow/_create.html.erb (50.7ms)
+  Rendered public_activity/follow/_create.html.erb (1561.7ms)
+  [1m[36mEvent Load (29.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mEvent Load (11.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (1.0ms)
+  Rendered shared/_created_at.html.erb (0.8ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_avatar.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (2.2ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/event/_like.html.erb (26.2ms)
+  Rendered public_activity/event/_like.html.erb (145.1ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/event/_like.html.erb (28.8ms)
+  Rendered public_activity/event/_like.html.erb (173.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_avatar.html.erb (1.1ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.9ms)
+  [1m[35m (13.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  [1m[35m (25.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (91.0ms)
+  Rendered likes/_form.html.erb (92.1ms)
+  Rendered shared/_actions.html.erb (119.3ms)
+  Rendered events/_event.html.erb (187.3ms)
+  Rendered shared/_actions.html.erb (118.4ms)
+  Rendered events/_event.html.erb (214.0ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (2.9ms)
+  Rendered shared/_actions.html.erb (8.2ms)
+  Rendered events/_event.html.erb (56.9ms)
+  Rendered public_activity/event/_create.html.erb (62.8ms)
+  Rendered public_activity/event/_create.html.erb (356.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (2.9ms)
+  Rendered shared/_actions.html.erb (18.0ms)
+  Rendered events/_event.html.erb (88.8ms)
+  Rendered public_activity/event/_create.html.erb (98.8ms)
+  Rendered public_activity/event/_create.html.erb (376.5ms)
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Post> at /mnt/c/Users/denni/rubit/app/models/post.rb:23)
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Post> at /mnt/c/Users/denni/rubit/app/models/post.rb:23)
+  [1m[36mPost Load (41.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.8ms)
+  Rendered shared/_created_at.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.8ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (14.0ms)
+  Rendered shared/_actions.html.erb (26.0ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (6.4ms)
+  Rendered posts/_post.html.erb (202.3ms)
+  Rendered shared/_actions.html.erb (19.5ms)
+  Rendered posts/_post.html.erb (190.1ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (5.2ms)
+  Rendered shared/_actions.html.erb (11.0ms)
+  Rendered posts/_post.html.erb (53.5ms)
+  Rendered public_activity/post/_create.html.erb (59.7ms)
+  Rendered public_activity/post/_create.html.erb (610.9ms)
+  Rendered likes/_form.html.erb (3.4ms)
+  Rendered shared/_actions.html.erb (27.7ms)
+  Rendered posts/_post.html.erb (71.9ms)
+  Rendered public_activity/post/_create.html.erb (79.9ms)
+  Rendered public_activity/post/_create.html.erb (608.6ms)
+  Rendered shared/_paginate.html.erb (5.1ms)
+  Rendered shared/_paginate.html.erb (4.4ms)
+  Rendered users/show.html.erb within layouts/application (5129.1ms)
+  Rendered users/show.html.erb within layouts/application (6911.0ms)
+  Rendered shared/_navbar.html.erb (8.2ms)
+  Rendered shared/_navbar.html.erb (6.7ms)
+Completed 200 OK in 7009ms (Views: 6559.3ms | ActiveRecord: 189.7ms)
+
+
+Completed 200 OK in 8757ms (Views: 8294.3ms | ActiveRecord: 229.4ms)
+
+
+Started GET "/users/dennis-preston" for 127.0.0.1 at 2017-10-03 10:09:32 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (1.4ms)
+  Rendered shared/_avatar.html.erb (1.7ms)
+  Rendered shared/_verified.html.erb (7.1ms)
+  Rendered shared/_user_info.html.erb (98.8ms)
+  [1m[35m (10.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24[0m
+  [1m[36mPublicActivity::Activity Load (6.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (27.5ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.8ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (8.0ms)
+  Rendered shared/_created_at.html.erb (1.1ms)
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/follow/_create.html.erb (92.6ms)
+  Rendered public_activity/follow/_create.html.erb (498.1ms)
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  Rendered shared/_avatar.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (1.0ms)
+  Rendered public_activity/event/_like.html.erb (37.2ms)
+  Rendered public_activity/event/_like.html.erb (126.9ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.9ms)
+  Rendered shared/_verified.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (23.9ms)
+  Rendered shared/_actions.html.erb (35.6ms)
+  Rendered events/_event.html.erb (103.7ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (9.1ms)
+  Rendered shared/_actions.html.erb (20.4ms)
+  Rendered events/_event.html.erb (73.6ms)
+  Rendered public_activity/event/_create.html.erb (87.6ms)
+  Rendered public_activity/event/_create.html.erb (242.4ms)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.9ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.9ms)
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (77.3ms)
+  Rendered shared/_actions.html.erb (105.1ms)
+  Rendered posts/_post.html.erb (172.0ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (10.2ms)
+  Rendered shared/_actions.html.erb (22.7ms)
+  Rendered posts/_post.html.erb (104.0ms)
+  Rendered public_activity/post/_create.html.erb (120.7ms)
+  Rendered public_activity/post/_create.html.erb (383.5ms)
+  Rendered shared/_paginate.html.erb (4.8ms)
+  Rendered users/show.html.erb within layouts/application (1587.7ms)
+  Rendered shared/_navbar.html.erb (6.2ms)
+Completed 200 OK in 1992ms (Views: 1901.6ms | ActiveRecord: 63.2ms)
+
+
+Started GET "/users/dennis-preston/edit" for 127.0.0.1 at 2017-10-03 10:09:38 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered shared/_avatar.html.erb (1.3ms)
+  Rendered shared/_cover.html.erb (0.8ms)
+  Rendered users/edit.html.erb within layouts/application (190.8ms)
+  Rendered shared/_navbar.html.erb (6.1ms)
+Completed 200 OK in 655ms (Views: 569.4ms | ActiveRecord: 7.2ms)
+
+
+Started PATCH "/users/dennis-preston" for 127.0.0.1 at 2017-10-03 10:10:28 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tKyTh7O2pB04VyzyI/efY81y8qwRY3mSD4CRxuvFI/tinvWT8ufcJUkaYT3IoozaE2WKNDBe8KrRDGZ2TP4qg==", "user"=>{"cover"=>#<ActionDispatch::Http::UploadedFile:0x007f6472318b88 @tempfile=#<Tempfile:/tmp/RackMultipart20171003-6006-qh74f6.jpg>, @original_filename="ab_claud_w_dennis_LOW_RES_13.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[cover]\"; filename=\"ab_claud_w_dennis_LOW_RES_13.jpg\"\r\nContent-Type: image/jpeg\r\n">, "name"=>"Dennis Preston", "about"=>"Yo my name is Dennis and this is my cool RoR site.", "location"=>"London", "phone_number"=>"0800001066", "dob"=>"1973-10-17", "sex"=>"male"}, "commit"=>"Update", "id"=>"dennis-preston"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (33.7ms)[0m  [1m[33mUPDATE "users" SET "cover" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["cover", "ab_claud_w_dennis_LOW_RES_13.jpg"], ["updated_at", 2017-10-03 09:10:28 UTC], ["id", 24]]
+  [1m[35m (27.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/dennis-preston
+Completed 302 Found in 1221ms (ActiveRecord: 62.9ms)
+
+
+Started GET "/users/dennis-preston" for 127.0.0.1 at 2017-10-03 10:10:29 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (6.0ms)
+  Rendered shared/_avatar.html.erb (9.1ms)
+  Rendered shared/_verified.html.erb (69.9ms)
+  Rendered shared/_user_info.html.erb (119.4ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24[0m
+  [1m[36mPublicActivity::Activity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (14.0ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.8ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_avatar.html.erb (13.8ms)
+  Rendered shared/_created_at.html.erb (2.6ms)
+  Rendered shared/_avatar.html.erb (4.1ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/follow/_create.html.erb (56.8ms)
+  Rendered public_activity/follow/_create.html.erb (471.2ms)
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.7ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (3.6ms)
+  Rendered public_activity/event/_like.html.erb (50.7ms)
+  Rendered public_activity/event/_like.html.erb (126.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.9ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (9.5ms)
+  Rendered shared/_actions.html.erb (59.2ms)
+  Rendered events/_event.html.erb (127.3ms)
+  Rendered shared/_avatar.html.erb (1.6ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (5.1ms)
+  Rendered shared/_actions.html.erb (18.7ms)
+  Rendered events/_event.html.erb (76.1ms)
+  Rendered public_activity/event/_create.html.erb (85.4ms)
+  Rendered public_activity/event/_create.html.erb (366.8ms)
+  [1m[36mPost Load (4.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (2.5ms)
+  Rendered shared/_actions.html.erb (11.5ms)
+  Rendered posts/_post.html.erb (42.8ms)
+  Rendered shared/_avatar.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (3.8ms)
+  Rendered shared/_actions.html.erb (8.5ms)
+  Rendered posts/_post.html.erb (38.6ms)
+  Rendered public_activity/post/_create.html.erb (49.3ms)
+  Rendered public_activity/post/_create.html.erb (142.1ms)
+  Rendered shared/_paginate.html.erb (11.8ms)
+  Rendered users/show.html.erb within layouts/application (1444.4ms)
+  Rendered shared/_navbar.html.erb (676.1ms)
+Completed 200 OK in 4443ms (Views: 4222.7ms | ActiveRecord: 34.6ms)
+
+
+Started GET "/users/dennis-preston" for 127.0.0.1 at 2017-10-03 10:13:24 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (9.9ms)
+  Rendered shared/_avatar.html.erb (1.2ms)
+  Rendered shared/_verified.html.erb (19.6ms)
+  Rendered shared/_user_info.html.erb (54.1ms)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24[0m
+  [1m[36mPublicActivity::Activity Load (1.5ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (0.6ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_avatar.html.erb (5.3ms)
+  Rendered shared/_created_at.html.erb (1.1ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.8ms)
+  Rendered public_activity/follow/_create.html.erb (72.9ms)
+  Rendered public_activity/follow/_create.html.erb (298.1ms)
+  [1m[36mEvent Load (9.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (3.4ms)
+  Rendered shared/_created_at.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (2.9ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/event/_like.html.erb (280.7ms)
+  Rendered public_activity/event/_like.html.erb (585.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.9ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.5ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (9.6ms)
+  Rendered shared/_actions.html.erb (41.3ms)
+  Rendered events/_event.html.erb (199.9ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (5.5ms)
+  Rendered shared/_actions.html.erb (16.0ms)
+  Rendered events/_event.html.erb (69.6ms)
+  Rendered public_activity/event/_create.html.erb (80.3ms)
+  Rendered public_activity/event/_create.html.erb (604.5ms)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (1.8ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (18.6ms)
+  Rendered shared/_actions.html.erb (39.2ms)
+  Rendered posts/_post.html.erb (110.2ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (1.3ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (36.2ms)
+  Rendered shared/_actions.html.erb (54.7ms)
+  Rendered posts/_post.html.erb (299.8ms)
+  Rendered public_activity/post/_create.html.erb (311.4ms)
+  Rendered public_activity/post/_create.html.erb (516.6ms)
+  Rendered shared/_paginate.html.erb (11.5ms)
+  Rendered users/show.html.erb within layouts/application (2440.6ms)
+  Rendered shared/_navbar.html.erb (235.2ms)
+Completed 200 OK in 3491ms (Views: 3416.3ms | ActiveRecord: 22.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:13:45 +0100
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  [1m[36mFollow Load (0.9ms)[0m  [1m[34mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = $1 AND "follows"."follower_type" = $2 AND "follows"."blocked" = $3[0m  [["follower_id", 24], ["follower_type", "User"], ["blocked", false]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 23[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/_avatar.html.erb (4.1ms)
+  Rendered shared/_verified.html.erb (41.8ms)
+  Rendered shared/_user_info.html.erb (107.4ms)
+  Rendered posts/_form.html.erb (289.2ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_id" IN (24, 23)[0m
+  [1m[36mPublicActivity::Activity Load (1.0ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_id" IN (24, 23) ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (2.1ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.9ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_avatar.html.erb (14.9ms)
+  Rendered shared/_created_at.html.erb (2.2ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/follow/_create.html.erb (53.2ms)
+  Rendered public_activity/follow/_create.html.erb (247.8ms)
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.7ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.8ms)
+  Rendered shared/_created_at.html.erb (2.7ms)
+  Rendered public_activity/event/_like.html.erb (39.7ms)
+  Rendered public_activity/event/_like.html.erb (115.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.6ms)
+  Rendered shared/_verified.html.erb (0.7ms)
+  Rendered shared/_created_at.html.erb (1.5ms)
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (43.0ms)
+  Rendered shared/_actions.html.erb (63.6ms)
+  Rendered events/_event.html.erb (148.9ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (11.1ms)
+  Rendered shared/_actions.html.erb (18.8ms)
+  Rendered events/_event.html.erb (199.5ms)
+  Rendered public_activity/event/_create.html.erb (211.1ms)
+  Rendered public_activity/event/_create.html.erb (426.2ms)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (17.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (44.1ms)
+  Rendered shared/_actions.html.erb (61.8ms)
+  Rendered posts/_post.html.erb (147.1ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (1.1ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (25.0ms)
+  Rendered shared/_actions.html.erb (62.5ms)
+  Rendered posts/_post.html.erb (219.0ms)
+  Rendered public_activity/post/_create.html.erb (235.1ms)
+  Rendered public_activity/post/_create.html.erb (465.7ms)
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Comment> at /mnt/c/Users/denni/rubit/app/models/comment.rb:27)
+  [1m[36mComment Load (40.4ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.5ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered shared/_created_at.html.erb (1.1ms)
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/comment/_create.html.erb (56.1ms)
+  Rendered public_activity/comment/_create.html.erb (393.3ms)
+  Rendered shared/_paginate.html.erb (11.1ms)
+  Rendered shared/_links.html.erb (20.1ms)
+  Rendered home/index.html.erb within layouts/application (2396.1ms)
+  Rendered shared/_navbar.html.erb (6.1ms)
+Completed 200 OK in 3081ms (Views: 2663.0ms | ActiveRecord: 96.5ms)
+
+
+Started GET "/users/dennis-preston/mentionable" for 127.0.0.1 at 2017-10-03 10:13:51 +0100
+Processing by UsersController#mentionable as JSON
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follows" ON "follows"."followable_id" = "users"."id" AND "follows"."followable_type" = $1 WHERE "follows"."blocked" = $2 AND "follows"."follower_id" = $3 AND "follows"."follower_type" = $4 AND "follows"."followable_type" = $5[0m  [["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["followable_type", "User"]]
+No serializer found for resource: {"id"=>23, "name"=>"Rails"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.13ms)
+Completed 200 OK in 331ms (Views: 183.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/dennis-preston/mentionable" for 127.0.0.1 at 2017-10-03 10:13:51 +0100
+Processing by UsersController#mentionable as JSON
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follows" ON "follows"."followable_id" = "users"."id" AND "follows"."followable_type" = $1 WHERE "follows"."blocked" = $2 AND "follows"."follower_id" = $3 AND "follows"."follower_type" = $4 AND "follows"."followable_type" = $5[0m  [["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["followable_type", "User"]]
+No serializer found for resource: {"id"=>23, "name"=>"Rails"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.15ms)
+Completed 200 OK in 72ms (Views: 13.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-03 10:15:50 +0100
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  [1m[36mFollow Load (13.5ms)[0m  [1m[34mSELECT "follows".* FROM "follows" WHERE "follows"."follower_id" = $1 AND "follows"."follower_type" = $2 AND "follows"."blocked" = $3[0m  [["follower_id", 24], ["follower_type", "User"], ["blocked", false]]
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 23[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/_avatar.html.erb (1.8ms)
+  Rendered shared/_verified.html.erb (9.1ms)
+  Rendered shared/_user_info.html.erb (33.0ms)
+  Rendered posts/_form.html.erb (1.8ms)
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_id" IN (24, 23)[0m
+  [1m[36mPublicActivity::Activity Load (0.7ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_id" IN (24, 23) ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (3.3ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.4ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (8.5ms)
+  Rendered shared/_created_at.html.erb (1.1ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/follow/_create.html.erb (169.7ms)
+  Rendered public_activity/follow/_create.html.erb (496.7ms)
+  [1m[36mEvent Load (5.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (1.3ms)
+  Rendered shared/_created_at.html.erb (0.7ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (1.0ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/event/_like.html.erb (52.7ms)
+  Rendered public_activity/event/_like.html.erb (198.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.5ms)
+  [1m[35m (14.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (54.8ms)
+  Rendered shared/_actions.html.erb (119.7ms)
+  Rendered events/_event.html.erb (345.9ms)
+  Rendered shared/_avatar.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (6.3ms)
+  Rendered shared/_actions.html.erb (16.1ms)
+  Rendered events/_event.html.erb (82.9ms)
+  Rendered public_activity/event/_create.html.erb (104.1ms)
+  Rendered public_activity/event/_create.html.erb (508.5ms)
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (23.8ms)
+  Rendered shared/_actions.html.erb (46.0ms)
+  Rendered posts/_post.html.erb (205.6ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (12.0ms)
+  Rendered shared/_actions.html.erb (83.6ms)
+  Rendered posts/_post.html.erb (196.3ms)
+  Rendered public_activity/post/_create.html.erb (230.7ms)
+  Rendered public_activity/post/_create.html.erb (549.2ms)
+  [1m[36mComment Load (13.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (5.9ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered shared/_created_at.html.erb (0.6ms)
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/comment/_create.html.erb (201.1ms)
+  Rendered public_activity/comment/_create.html.erb (410.4ms)
+  Rendered shared/_paginate.html.erb (4.9ms)
+  Rendered shared/_links.html.erb (2.4ms)
+  Rendered home/index.html.erb within layouts/application (2537.9ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034593589680 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+  Rendered shared/_navbar.html.erb (6.5ms)
+Completed 200 OK in 18528ms (Views: 18381.8ms | ActiveRecord: 69.9ms)
+
+
+Started GET "/assets/application.self-fef75d9d3092d3bf515c0bacd9ddcee9b2a519260a7f4e0b0002435bbe375007.css?body=1" for 127.0.0.1 at 2017-10-03 10:16:09 +0100
+Started GET "/users/dennis-preston/mentionable" for 127.0.0.1 at 2017-10-03 10:16:11 +0100
+Processing by UsersController#mentionable as JSON
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follows" ON "follows"."followable_id" = "users"."id" AND "follows"."followable_type" = $1 WHERE "follows"."blocked" = $2 AND "follows"."follower_id" = $3 AND "follows"."follower_type" = $4 AND "follows"."followable_type" = $5[0m  [["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["followable_type", "User"]]
+No serializer found for resource: {"id"=>23, "name"=>"Rails"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.29ms)
+Completed 200 OK in 119ms (Views: 2.2ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/users/dennis-preston/mentionable" for 127.0.0.1 at 2017-10-03 10:16:11 +0100
+Processing by UsersController#mentionable as JSON
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follows" ON "follows"."followable_id" = "users"."id" AND "follows"."followable_type" = $1 WHERE "follows"."blocked" = $2 AND "follows"."follower_id" = $3 AND "follows"."follower_type" = $4 AND "follows"."followable_type" = $5[0m  [["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["followable_type", "User"]]
+No serializer found for resource: {"id"=>23, "name"=>"Rails"}
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.23ms)
+Completed 200 OK in 27ms (Views: 6.8ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/users/dennis-preston" for 127.0.0.1 at 2017-10-03 10:18:10 +0100
+Started GET "/users/dennis-preston" for 127.0.0.1 at 2017-10-03 10:18:10 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (3.1ms)
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (12.2ms)
+  Rendered shared/_avatar.html.erb (5.3ms)
+  Rendered shared/_avatar.html.erb (10.1ms)
+  Rendered shared/_verified.html.erb (26.2ms)
+  Rendered shared/_user_info.html.erb (92.8ms)
+  Rendered shared/_verified.html.erb (41.6ms)
+  Rendered shared/_user_info.html.erb (122.6ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24[0m
+  [1m[36mPublicActivity::Activity Load (1.0ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[35m (17.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24[0m
+  [1m[36mPublicActivity::Activity Load (17.0ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (13.5ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mFollow Load (26.6ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_verified.html.erb (2.3ms)
+  Rendered shared/_avatar.html.erb (0.9ms)
+  Rendered shared/_verified.html.erb (1.2ms)
+  Rendered shared/_avatar.html.erb (16.3ms)
+  Rendered shared/_created_at.html.erb (3.4ms)
+  Rendered shared/_avatar.html.erb (10.8ms)
+  Rendered shared/_avatar.html.erb (3.8ms)
+  Rendered shared/_created_at.html.erb (3.2ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/follow/_create.html.erb (63.2ms)
+  Rendered shared/_avatar.html.erb (1.0ms)
+  Rendered public_activity/follow/_create.html.erb (373.2ms)
+  Rendered shared/_verified.html.erb (0.7ms)
+  Rendered shared/_avatar.html.erb (8.2ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/follow/_create.html.erb (63.1ms)
+  Rendered public_activity/follow/_create.html.erb (376.3ms)
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_created_at.html.erb (2.2ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (9.0ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (1.0ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/event/_like.html.erb (22.7ms)
+  Rendered public_activity/event/_like.html.erb (50.9ms)
+  Rendered public_activity/event/_like.html.erb (157.3ms)
+  Rendered public_activity/event/_like.html.erb (144.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.9ms)
+  Rendered shared/_avatar.html.erb (0.9ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (1.3ms)
+  Rendered shared/_created_at.html.erb (0.8ms)
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (21.0ms)
+  Rendered shared/_actions.html.erb (68.5ms)
+  Rendered events/_event.html.erb (132.5ms)
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (88.1ms)
+  Rendered shared/_actions.html.erb (147.8ms)
+  Rendered events/_event.html.erb (202.7ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (6.7ms)
+  Rendered shared/_actions.html.erb (23.7ms)
+  Rendered events/_event.html.erb (174.2ms)
+  Rendered public_activity/event/_create.html.erb (183.7ms)
+  Rendered public_activity/event/_create.html.erb (405.1ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (7.2ms)
+  Rendered shared/_actions.html.erb (26.3ms)
+  Rendered events/_event.html.erb (150.5ms)
+  Rendered public_activity/event/_create.html.erb (159.1ms)
+  Rendered public_activity/event/_create.html.erb (445.0ms)
+  [1m[36mPost Load (9.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.1ms)
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (0.9ms)
+  Rendered shared/_created_at.html.erb (0.8ms)
+  Rendered shared/_verified.html.erb (0.9ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (3.6ms)
+  Rendered shared/_actions.html.erb (10.1ms)
+  Rendered posts/_post.html.erb (89.2ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (6.7ms)
+  Rendered shared/_actions.html.erb (15.4ms)
+  Rendered posts/_post.html.erb (110.7ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (2.1ms)
+  Rendered shared/_actions.html.erb (8.7ms)
+  Rendered posts/_post.html.erb (45.5ms)
+  Rendered public_activity/post/_create.html.erb (58.1ms)
+  Rendered public_activity/post/_create.html.erb (239.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (2.2ms)
+  Rendered shared/_actions.html.erb (12.3ms)
+  Rendered posts/_post.html.erb (44.1ms)
+  Rendered public_activity/post/_create.html.erb (53.7ms)
+  Rendered public_activity/post/_create.html.erb (227.3ms)
+  Rendered shared/_paginate.html.erb (14.0ms)
+  Rendered shared/_paginate.html.erb (14.5ms)
+  Rendered users/show.html.erb within layouts/application (1626.9ms)
+  Rendered users/show.html.erb within layouts/application (1557.2ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034601457720 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/comments.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/events.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/follows.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/home.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/likes.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/posts.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/styles.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/users.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.css.scss to /mnt/c/Users/denni/rubit/app/assets/stylesheets/variables.scss. (called from _app_views_layouts_application_html_erb___480023398273178600_70034693878300 at /mnt/c/Users/denni/rubit/app/views/layouts/application.html.erb:5)
+  Rendered shared/_navbar.html.erb (39.7ms)
+Completed 200 OK in 16405ms (Views: 16155.2ms | ActiveRecord: 97.0ms)
+
+
+Started GET "/users/dennis-preston" for 127.0.0.1 at 2017-10-03 10:18:27 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"dennis-preston"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "dennis-preston"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (1.0ms)
+  Rendered shared/_avatar.html.erb (1.4ms)
+  Rendered shared/_verified.html.erb (8.7ms)
+  Rendered shared/_user_info.html.erb (39.1ms)
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24[0m
+  [1m[36mPublicActivity::Activity Load (0.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 24 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mFollow Load (0.5ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.6ms)
+  Rendered shared/_avatar.html.erb (5.7ms)
+  Rendered shared/_created_at.html.erb (1.2ms)
+  Rendered shared/_avatar.html.erb (0.5ms)
+  Rendered shared/_verified.html.erb (0.8ms)
+  Rendered shared/_avatar.html.erb (0.8ms)
+  Rendered shared/_created_at.html.erb (0.5ms)
+  Rendered public_activity/follow/_create.html.erb (325.5ms)
+  Rendered public_activity/follow/_create.html.erb (673.3ms)
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.7ms)
+  Rendered shared/_verified.html.erb (1.7ms)
+  Rendered shared/_created_at.html.erb (1.6ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.4ms)
+  Rendered public_activity/event/_like.html.erb (86.4ms)
+  Rendered public_activity/event/_like.html.erb (283.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (0.6ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (0.6ms)
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (39.7ms)
+  Rendered shared/_actions.html.erb (84.1ms)
+  Rendered events/_event.html.erb (208.7ms)
+  Rendered shared/_avatar.html.erb (1.2ms)
+  Rendered shared/_verified.html.erb (0.4ms)
+  Rendered shared/_created_at.html.erb (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 17], ["votable_type", "Event"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (9.7ms)
+  Rendered shared/_actions.html.erb (19.7ms)
+  Rendered events/_event.html.erb (169.6ms)
+  Rendered public_activity/event/_create.html.erb (183.0ms)
+  Rendered public_activity/event/_create.html.erb (499.5ms)
+  [1m[36mPost Load (24.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.3ms)
+  Rendered shared/_verified.html.erb (0.5ms)
+  Rendered shared/_created_at.html.erb (2.6ms)
+  [1m[35m (13.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (32.3ms)
+  Rendered shared/_actions.html.erb (81.7ms)
+  Rendered posts/_post.html.erb (190.7ms)
+  Rendered shared/_avatar.html.erb (0.4ms)
+  Rendered shared/_verified.html.erb (0.9ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."voter_id" = $1 AND "votes"."voter_type" = $2 AND "votes"."votable_id" = $3 AND "votes"."votable_type" = $4 AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = $5[0m  [["voter_id", 24], ["voter_type", "User"], ["votable_id", 20], ["votable_type", "Post"], ["vote_flag", true]]
+  Rendered likes/_form.html.erb (15.1ms)
+  Rendered shared/_actions.html.erb (41.0ms)
+  Rendered posts/_post.html.erb (148.3ms)
+  Rendered public_activity/post/_create.html.erb (165.1ms)
+  Rendered public_activity/post/_create.html.erb (497.4ms)
+  Rendered shared/_paginate.html.erb (6.5ms)
+  Rendered users/show.html.erb within layouts/application (2478.0ms)
+  Rendered shared/_navbar.html.erb (11.1ms)
+Completed 200 OK in 3009ms (Views: 2901.0ms | ActiveRecord: 60.6ms)
+
+
+Started GET "/assets/application.self-a88b1bc41422f33b229ff1740d9c4e69e904bc4e2dad1b212092b49cf073bf5c.css?body=1" for 127.0.0.1 at 2017-10-03 10:18:30 +0100
+Started GET "/users/rails" for 127.0.0.1 at 2017-10-03 10:40:27 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"rails"}
+  [1m[36mUser Load (196.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (19.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "rails"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (762.1ms)
+Started GET "/users/rails" for 127.0.0.1 at 2017-10-03 10:41:08 +0100
+  Rendered shared/_avatar.html.erb (9926.1ms)
+  Rendered shared/_verified.html.erb (81.7ms)
+  [1m[36mFollow Load (65.7ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."followable_id" = $1 AND "follows"."followable_type" = $2 AND "follows"."blocked" = $3 AND "follows"."follower_id" = $4 AND "follows"."follower_type" = $5 ORDER BY "follows"."id" ASC LIMIT $6[0m  [["followable_id", 23], ["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (26.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  Rendered follows/_form.html.erb (5685.6ms)
+  [1m[36mFollow Load (47.6ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."followable_id" = $1 AND "follows"."followable_type" = $2 AND "follows"."blocked" = $3 AND "follows"."follower_id" = $4 AND "follows"."follower_type" = $5 ORDER BY "follows"."id" ASC LIMIT $6[0m  [["followable_id", 24], ["followable_type", "User"], ["blocked", false], ["follower_id", 23], ["follower_type", "User"], ["LIMIT", 1]]
+  Rendered shared/_user_info.html.erb (19043.1ms)
+  [1m[35m (36.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 23[0m
+  [1m[36mPublicActivity::Activity Load (3.5ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 23 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mComment Load (56.9ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (214.7ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  [1m[36mEvent Load (16.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered shared/_created_at.html.erb (1346.8ms)
+  Rendered shared/_avatar.html.erb (67.1ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  Rendered shared/_created_at.html.erb (73.2ms)
+  Rendered public_activity/comment/_create.html.erb (476.1ms)
+  Rendered public_activity/comment/_create.html.erb (4986.3ms)
+  Rendered shared/_paginate.html.erb (929.4ms)
+  Rendered users/show.html.erb within layouts/application (29917.3ms)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /mnt/c/Users/denni/rubit/app/controllers/application_controller.rb:10)
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"rails"}
+  [1m[36mUser Load (103.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "rails"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (49.5ms)
+  Rendered shared/_navbar.html.erb (1037.2ms)
+Completed 200 OK in 72987ms (Views: 52841.4ms | ActiveRecord: 443.7ms)
+
+
+Started GET "/users/rails" for 127.0.0.1 at 2017-10-03 10:41:55 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"rails"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."slug" = $1 LIMIT $2[0m  [["slug", "rails"], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered shared/_cover.html.erb (250.7ms)
+  Rendered shared/_avatar.html.erb (380.7ms)
+  Rendered shared/_verified.html.erb (118.8ms)
+  [1m[36mFollow Load (0.9ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."followable_id" = $1 AND "follows"."followable_type" = $2 AND "follows"."blocked" = $3 AND "follows"."follower_id" = $4 AND "follows"."follower_type" = $5 ORDER BY "follows"."id" ASC LIMIT $6[0m  [["followable_id", 23], ["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["LIMIT", 1]]
+  Rendered follows/_form.html.erb (677.5ms)
+  [1m[36mFollow Load (28.0ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."followable_id" = $1 AND "follows"."followable_type" = $2 AND "follows"."blocked" = $3 AND "follows"."follower_id" = $4 AND "follows"."follower_type" = $5 ORDER BY "follows"."id" ASC LIMIT $6[0m  [["followable_id", 24], ["followable_type", "User"], ["blocked", false], ["follower_id", 23], ["follower_type", "User"], ["LIMIT", 1]]
+  Rendered shared/_user_info.html.erb (3745.2ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 23[0m
+  [1m[36mPublicActivity::Activity Load (26.0ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 23 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (8.5ms)
+  Rendered shared/_verified.html.erb (14.8ms)
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered shared/_created_at.html.erb (165.5ms)
+  Rendered shared/_avatar.html.erb (167.0ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  Rendered shared/_created_at.html.erb (0.3ms)
+  Rendered public_activity/comment/_create.html.erb (533.1ms)
+  Rendered public_activity/comment/_create.html.erb (2972.4ms)
+  Rendered shared/_paginate.html.erb (264.1ms)
+  Rendered users/show.html.erb within layouts/application (8710.8ms)
+  Rendered shared/_navbar.html.erb (240.7ms)
+Completed 200 OK in 24635ms (Views: 24199.0ms | ActiveRecord: 69.0ms)
+
+
+  Rendered shared/_avatar.html.erb (36756.6ms)
+  Rendered shared/_verified.html.erb (0.8ms)
+  [1m[36mFollow Load (31.2ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."followable_id" = $1 AND "follows"."followable_type" = $2 AND "follows"."blocked" = $3 AND "follows"."follower_id" = $4 AND "follows"."follower_type" = $5 ORDER BY "follows"."id" ASC LIMIT $6[0m  [["followable_id", 23], ["followable_type", "User"], ["blocked", false], ["follower_id", 24], ["follower_type", "User"], ["LIMIT", 1]]
+  Rendered follows/_form.html.erb (499.6ms)
+  [1m[36mFollow Load (0.7ms)[0m  [1m[34mSELECT  "follows".* FROM "follows" WHERE "follows"."followable_id" = $1 AND "follows"."followable_type" = $2 AND "follows"."blocked" = $3 AND "follows"."follower_id" = $4 AND "follows"."follower_type" = $5 ORDER BY "follows"."id" ASC LIMIT $6[0m  [["followable_id", 24], ["followable_type", "User"], ["blocked", false], ["follower_id", 23], ["follower_type", "User"], ["LIMIT", 1]]
+  Rendered shared/_user_info.html.erb (37311.3ms)
+  [1m[35m (61.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 23[0m
+  [1m[36mPublicActivity::Activity Load (1.1ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."owner_type" = 'User' AND "activities"."owner_id" = 23 ORDER BY "activities"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+DEPRECATION WARNING: #table_exists? currently checks both tables and views. This behavior is deprecated and will be changed with Rails 5.1 to only check tables. Use #data_source_exists? instead. (called from <class:Comment> at /mnt/c/Users/denni/rubit/app/models/comment.rb:27)
+  [1m[36mComment Load (48.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = $1 ORDER BY created_at DESC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered shared/_avatar.html.erb (1.7ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  [1m[36mEvent Load (31.8ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendered shared/_created_at.html.erb (865.0ms)
+  Rendered shared/_avatar.html.erb (0.8ms)
+  Rendered shared/_verified.html.erb (0.1ms)
+  Rendered shared/_created_at.html.erb (0.2ms)
+  Rendered public_activity/comment/_create.html.erb (16.6ms)
+  Rendered public_activity/comment/_create.html.erb (1388.5ms)
+  Rendered shared/_paginate.html.erb (3.8ms)
+  Rendered users/show.html.erb within layouts/application (39157.9ms)
+  Rendered shared/_navbar.html.erb (6.2ms)
+Completed 200 OK in 42141ms (Views: 40274.8ms | ActiveRecord: 367.0ms)
+
+
+Started GET "/assets/avatar-d36f156385e65678a0ae13443b02306dccecf0b2984b88a29d762aa452f5cdf8.jpg" for 127.0.0.1 at 2017-10-03 10:42:33 +0100
+Started GET "/assets/cover.png" for 127.0.0.1 at 2017-10-03 10:42:43 +0100
