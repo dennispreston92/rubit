@@ -20,10 +20,10 @@
       <span class="comments-count"><%= pluralize(post.comments_count, 'comment') %></span>
       <div class="pull-right">
         <% if belongs_to_user?(post) %>
-          <%= link_to edit_post_path(post), class: 'btn btn-primary btn-sm' do %>
+          <%= link_to edit_post_path(post), class: 'btn btn-primary btn-sm', data: { toggle: 'tooltip' }, title: 'Edit' do %>
             <% fa_icon 'pencil' %>
           <% end %>
-          <%= link_to post_path(post), method: :delete, class:'btn btn-danger btn-sm', remote: remote do %>
+          <%= link_to post_path(post), method: :delete, class:'btn btn-danger btn-sm', remote: remote, data: { toggle: 'tooltip' }, title: 'Delete' do %>
             <% fa_icon 'trash' %>
           <% end %>
         <% end %>
