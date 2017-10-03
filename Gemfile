@@ -5,6 +5,8 @@ ruby '~> 2.4.1'
 gem 'rails', '5.0.2'
 
 gem 'sendgrid-ruby'
+gem 'fog'
+gem 'fog-aws'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0.0'
@@ -40,8 +42,6 @@ group :production do
   gem 'pg'
   gem 'unicorn'
   gem 'rails_12factor'
-  gem 'fog'
-  gem 'fog-aws'
 end
 
 gem 'devise'
