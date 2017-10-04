@@ -22,6 +22,11 @@
       <%= @user.location %>
     </h5>
   <% end %>
+  <% if @user.about.present? %>
+    <p class="about">
+      <%= @user.about %>
+    </p>
+  <% end %>
   <br>
   <div class="text-center">
     <% unless is_current_user?(@user) %>
