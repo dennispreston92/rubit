@@ -20,6 +20,11 @@ a {
   text-decoration: none !important;
 }
 
+.tooltip-wrapper {
+  float: right;
+  margin-left: 4px;
+}
+
 #links a, #user-info a, .info a, .name a, .well .nav-pills.nav-stacked li a {
   text-decoration: none;
   color: #666;
