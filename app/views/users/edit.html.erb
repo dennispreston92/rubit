@@ -1,8 +1,9 @@
 <div class="row">
   <div class="col-lg-6 col-lg-offset-3">
     <div class="well">
+      <div id="mentionable-data" data-content="<%= mentionable_user_path(current_user) %>"></div>
       <h3>Edit Profile</h3>
-      <%= form_for @user, :html => {:multipart => true} do |f| %>
+      <%= form_for @user, :html => { class: 'user_form', :multipart => true } do |f| %>
         <div class="form-group">
           <%= f.label :avatar %>
           <br>
@@ -22,10 +23,13 @@
           <%= f.label :name %>
           <%= f.text_field :name, placeholder: 'Full Name', class: 'form-control' %>
         </div>
+
         <div class="form-group">
           <%= f.label :about %>
-          <%= f.text_area :about, placeholder: 'About', class: 'form-control' %>
+          <div id="user-about" contenteditable="true" class="editable form-control input-mentionable" placeholder="About"></div>
+          <%= f.hidden_field :about, value: @user.about, class: 'form-control input-mentionable' %>
         </div>
+
         <div class="form-group">
           <%= f.label :location %>
           <%= f.text_field :location, placeholder: 'Location', class: 'form-control' %>

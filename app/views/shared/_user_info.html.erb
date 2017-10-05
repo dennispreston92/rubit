@@ -23,9 +23,9 @@
     </h5>
   <% end %>
   <% if @user.about.present? %>
-    <p class="about">
-      <%= @user.about %>
-    </p>
+    <span class="about">
+      <%= @user.about_html %>
+    </span>
   <% end %>
   <br>
   <div class="text-center">

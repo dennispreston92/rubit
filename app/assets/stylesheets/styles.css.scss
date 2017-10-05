@@ -29,11 +29,21 @@ a {
   margin-left: 4px;
 }
 
-p.about {
+span.about p {
   padding-top: 10px;
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 0;
+}
+
+#user-info span.about p a, .content a {
+  text-decoration: none;
+  color: #c33;
+  font-weight: bold;
+}
+
+.points a {
+  color: #fff;
 }
 
 #links a, #user-info a, .info a, .name a, .well .nav-pills.nav-stacked li a {

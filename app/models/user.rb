@@ -5,6 +5,8 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  include Mention
+
   devise :database_authenticatable, :registerable, :confirmable,
     :recoverable, :rememberable, :trackable, :validatable
   acts_as_voter
@@ -21,6 +23,11 @@ class User < ActiveRecord::Base
   validates_presence_of :name
 
   self.per_page = 10
+
+  auto_html_for :about do
+    link target: '_blank', rel: 'nofollow'
+    simple_format
+  end
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
