@@ -27,6 +27,9 @@
       <%= @user.about_html %>
     </span>
   <% end %>
+  <% if @user.id == 1 %>
+    <a href="https://www.testdome.com/cert/hwcjuew389" class="testdome-certificate-stamp silver" style="margin: 20px auto 0 auto"><span class="testdome-certificate-name">Dennis Preston</span><span class="testdome-certificate-test-name">Ruby on Rails </span><span class="testdome-certificate-card-logo">TestDome<br />Certificate</span></a><script type="text/javascript">var stylesheet = "https://www.testdome.com/content/source/stylesheets/embed.css", link = document.createElement("link"); link.href = stylesheet, link.type = "text/css", link.rel = "stylesheet", link.media = "screen,print", document.getElementsByTagName("head")[0].appendChild(link);</script>
+  <% end %>
   <br>
   <div class="text-center">
     <% unless is_current_user?(@user) %>
